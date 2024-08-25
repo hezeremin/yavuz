@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navigation button {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.navigation button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.panel {
+    padding: 20px;
+    display: none;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-top: 0;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #555;
+}
+
+.mesaj {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    margin: 20px 0;
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.mesaj.success {
+    background-color: #4CAF50;
+}
+
+.mesaj.error {
+    background-color: #f44336;
+}
+
+#soruListesiUl {
+    list-style-type: none;
+    padding: 0;
+}
+
+#soruListesiUl li {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

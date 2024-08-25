@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navigation">
+        <button onclick="showPanel('soruCozme')">Soru Çözme</button>
+        <button onclick="showPanel('yonetimPaneli')">Yönetim Paneli</button>
+    </div>
+
+    <div id="soruCozme" class="panel" style="display: none;">
+        <h2>Soru Çözme</h2>
+        <form>
+            <button type="button" id="rastgeleSoruButonu" onclick="rastgeleSoruGetir()" style="display: none;">Rastgele Soru Getir</button>
+            <div id="rastgeleSoru"></div>
+            <input type="text" id="cevap" placeholder="Cevabınızı Girin">
+            <button type="button" onclick="cevabiKontrolEt()">Cevabı Kontrol Et</button>
+            <div id="puan">Puan: 0</div>
+        </form>
+    </div>
+
+    <div id="yonetimPaneli" class="panel" style="display: none;">
+        <div class="form-container" id="soruEkleme">
+            <h2>Soru Ekleme</h2>
+            <form>
+                <input type="text" id="soruMetni" placeholder="Soru Metni">
+                <input type="text" id="secenekA" placeholder="Seçenek A">
+                <input type="text" id="secenekB" placeholder="Seçenek B">
+                <input type="text" id="secenekC" placeholder="Seçenek C">
+                <input type="text" id="secenekD" placeholder="Seçenek D">
+                <input type="text" id="dogruCevap" placeholder="Doğru Cevap (A, B, C veya D)">
+                <select id="zorlukDerecesi">
+                    <option value="1">Kolay</option>
+                    <option value="2">Orta</option>
+                    <option value="3">Zor</option>
+                </select>
+                <button type="button" onclick="soruEkle()">Soru Ekle</button>
+            </form>
+        </div>
+
+        <div class="form-container" id="soruSilme">
+            <h2>Soru Silme</h2>
+            <form>
+                <input type="text" id="silinecekSoru" placeholder="Silinecek Soru Metni">
+                <button type="button" onclick="soruSil()">Soru Sil</button>
+            </form>
+        </div>
+
+        <div class="form-container" id="soruDuzenleme">
+            <h2>Soru Düzenleme</h2>
+            <form>
+                <input type="text" id="duzenlenecekSoru" placeholder="Düzenlenecek Soru Metni">
+                <input type="text" id="yeniSoruMetni" placeholder="Yeni Soru Metni">
+                <input type="text" id="yeniSecenekA" placeholder="Yeni Seçenek A">
+                <input type="text" id="yeniSecenekB" placeholder="Yeni Seçenek B">
+                <input type="text" id="yeniSecenekC" placeholder="Yeni Seçenek C">
+                <input type="text" id="yeniSecenekD" placeholder="Yeni Seçenek D">
+                <input type="text" id="yeniDogruCevap" placeholder="Yeni Doğru Cevap (A, B, C veya D)">
+                <select id="yeniZorlukDerecesi">
+                    <option value="1">Kolay</option>
+                    <option value="2">Orta</option>
+                    <option value="3">Zor</option>
+                </select>
+                <button type="button" onclick="soruDuzenle()">Soru Düzenle</button>
+            </form>
+        </div>
+
+        <div class="form-container" id="soruArama">
+            <h2>Soru Arama</h2>
+            <form>
+                <input type="text" id="aranacakSoru" placeholder="Aranacak Soru Metni">
+                <button type="button" onclick="soruAra()">Soru Ara</button>
+            </form>
+        </div>
+
+        <div id="soruListesi">
+            <h2>Soru Listesi</h2>
+            <ul id="soruListesiUl"></ul>
+        </div>
+    </div>
+
+    <div id="mesaj" class="mesaj"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
